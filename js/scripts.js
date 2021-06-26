@@ -1,124 +1,120 @@
 /* Description: Custom JS file */
 
+/* Navigation*/
+// Collapse the navbar by adding the top-nav-collapse class
+window.onscroll = function () {
+	scrollFunction();
+	scrollFunctionBTT(); // back to top button
+};
 
-(function($) {
-    "use strict"; 
-	
-    /* Navbar Scripts */
-    // jQuery to collapse the navbar on scroll
-    $(window).on('scroll load', function() {
-		if ($(".navbar").offset().top > 60) {
-			$(".fixed-top").addClass("top-nav-collapse");
+function scrollFunction() {
+	let intViewportWidth = window.innerWidth;
+	if (
+		document.body.scrollTop > 30 ||
+		(document.documentElement.scrollTop > 30) & (intViewportWidth > 991)
+	) {
+		document.getElementById("navbar").classList.add("top-nav-collapse");
+	} else if (
+		document.body.scrollTop < 30 ||
+		(document.documentElement.scrollTop < 30) & (intViewportWidth > 991)
+	) {
+		document.getElementById("navbar").classList.remove("top-nav-collapse");
+	}
+}
+
+// Navbar on mobile
+let elements = document.querySelectorAll(".nav-link:not(.dropdown-toggle)");
+
+for (let i = 0; i < elements.length; i++) {
+	elements[i].addEventListener("click", () => {
+		document.querySelector(".offcanvas-collapse").classList.toggle("open");
+	});
+}
+
+document.querySelector(".navbar-toggler").addEventListener("click", () => {
+  	document.querySelector(".offcanvas-collapse").classList.toggle("open");
+});
+
+// Hover on desktop
+function toggleDropdown(e) {
+	const _d = e.target.closest(".dropdown");
+	let _m = document.querySelector(".dropdown-menu", _d);
+
+	setTimeout(
+		function () {
+		const shouldOpen = _d.matches(":hover");
+		_m.classList.toggle("show", shouldOpen);
+		_d.classList.toggle("show", shouldOpen);
+
+		_d.setAttribute("aria-expanded", shouldOpen);
+		},
+		e.type === "mouseleave" ? 300 : 0
+	);
+}
+
+// On hover
+const dropdownCheck = document.querySelector('.dropdown');
+
+if (dropdownCheck !== null) { 
+	document.querySelector(".dropdown").addEventListener("mouseleave", toggleDropdown);
+	document.querySelector(".dropdown").addEventListener("mouseover", toggleDropdown);
+
+	// On click
+	document.querySelector(".dropdown").addEventListener("click", (e) => {
+		const _d = e.target.closest(".dropdown");
+		let _m = document.querySelector(".dropdown-menu", _d);
+		if (_d.classList.contains("show")) {
+			_m.classList.remove("show");
+			_d.classList.remove("show");
 		} else {
-			$(".fixed-top").removeClass("top-nav-collapse");
-		}
-    });
-    
-	// jQuery for page scrolling feature - requires jQuery Easing plugin
-	$(function() {
-		$(document).on('click', 'a.page-scroll', function(event) {
-			var $anchor = $(this);
-			$('html, body').stop().animate({
-				scrollTop: $($anchor.attr('href')).offset().top
-			}, 600, 'easeInOutExpo');
-			event.preventDefault();
-		});
-    });
-
-    // offcanvas script from Bootstrap + added element to close menu on click in small viewport
-    $('[data-toggle="offcanvas"], .navbar-nav li a:not(.dropdown-toggle').on('click', function () {
-        $('.offcanvas-collapse').toggleClass('open')
-    })
-
-    // hover in desktop mode
-    function toggleDropdown (e) {
-        const _d = $(e.target).closest('.dropdown'),
-            _m = $('.dropdown-menu', _d);
-        setTimeout(function(){
-            const shouldOpen = e.type !== 'click' && _d.is(':hover');
-            _m.toggleClass('show', shouldOpen);
-            _d.toggleClass('show', shouldOpen);
-            $('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
-        }, e.type === 'mouseleave' ? 300 : 0);
-    }
-    $('body')
-    .on('mouseenter mouseleave','.dropdown',toggleDropdown)
-    .on('click', '.dropdown-menu a', toggleDropdown);
-
-
-    /* Details Lightbox - Magnific Popup */
-    $('.popup-with-move-anim').magnificPopup({
-		type: 'inline',
-		fixedContentPos: true,
-		fixedBgPos: true,
-		overflowY: 'auto',
-		closeBtnInside: true,
-		preloader: false,
-		midClick: true,
-		removalDelay: 300,
-		mainClass: 'my-mfp-slide-bottom'
-    });
-    
-
-    /* Counter - CountTo */
-	var a = 0;
-	$(window).scroll(function() {
-		if ($('#counter').length) { // checking if CountTo section exists in the page, if not it will not run the script and avoid errors	
-			var oTop = $('#counter').offset().top - window.innerHeight;
-			if (a == 0 && $(window).scrollTop() > oTop) {
-			$('.counter-value').each(function() {
-				var $this = $(this),
-				countTo = $this.attr('data-count');
-				$({
-				countNum: $this.text()
-				}).animate({
-					countNum: countTo
-				},
-				{
-					duration: 2000,
-					easing: 'swing',
-					step: function() {
-					    $this.text(Math.floor(this.countNum));
-					},
-					complete: function() {
-					    $this.text(this.countNum);
-					    //alert('finished');
-					}
-				});
-			});
-			a = 1;
-			}
-		}
-    });
-
-
-    /* Move Form Fields Label When User Types */
-    // for input and textarea fields
-    $("input, textarea").keyup(function(){
-		if ($(this).val() != '') {
-			$(this).addClass('notEmpty');
-		} else {
-			$(this).removeClass('notEmpty');
+			_m.classList.add("show");
+			_d.classList.add("show");
 		}
 	});
-	
+}
+  
 
-    /* Back To Top Button */
-    // create the back to top button
-    $('body').prepend('<a href="body" class="back-to-top page-scroll">Back to Top</a>');
-    var amountScrolled = 700;
-    $(window).scroll(function() {
-        if ($(window).scrollTop() > amountScrolled) {
-            $('a.back-to-top').fadeIn('500');
-        } else {
-            $('a.back-to-top').fadeOut('500');
-        }
-    });
+/* Card Slider - Swiper */
+var cardSlider = new Swiper('.card-slider', {
+	autoplay: {
+		delay: 4000,
+		disableOnInteraction: false
+	},
+	loop: true,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev'
+	}
+});
 
 
-	/* Removes Long Focus On Buttons */
-	$(".button, a, button").mouseup(function() {
-		$(this).blur();
-	});
+/* Modal Button Close And Scroll To Link */
+const theModal = document.getElementById('staticBackdrop');
+// Needs the if otherwise it will serve error on pages without the modal like the extra pages
+if (theModal !== null) { 
+	const theModalGen = new bootstrap.Modal(theModal);
+	const theModalCtaBtn = document.getElementById('modalCtaBtn');
+	theModalCtaBtn.addEventListener('click', function () {
+		theModalGen.hide(); 
+	})
+}
 
-})(jQuery);
+
+/* Back To Top Button */
+// Get the button
+myButton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+function scrollFunctionBTT() {
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		myButton.style.display = "block";
+	} else {
+		myButton.style.display = "none";
+	}
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+	document.body.scrollTop = 0; // for Safari
+	document.documentElement.scrollTop = 0; // for Chrome, Firefox, IE and Opera
+}
