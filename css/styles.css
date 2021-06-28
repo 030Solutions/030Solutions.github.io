@@ -26,7 +26,7 @@ Table Of Contents:
 /*****************************************
 Colors:
 - Backgrounds - light gray #f7f9fd
-- Buttons, icons - green #7dc22b
+- Buttons, icons - green  #f7f9fd
 - Headings text - black #2b2b4f
 - Body text - dark gray #53575a
 ******************************************/
@@ -150,7 +150,7 @@ a:hover {
 }
 
 .green {
-	color: #7dc22b;
+	color: #f7f9fd;
 }
 
 .bg-gray {
@@ -170,9 +170,9 @@ a:hover {
 .btn-solid-reg {
 	display: inline-block;
 	padding: 1.375rem 2.25rem 1.375rem 2.25rem;
-	border: 1px solid #7dc22b;
+	border: 1px solid  #f7f9fd;
 	border-radius: 4px;
-	background-color: #7dc22b;
+	background-color:  #f7f9fd;
 	color: #ffffff;
 	font-weight: 600;
 	font-size: 0.875rem;
@@ -183,16 +183,16 @@ a:hover {
 
 .btn-solid-reg:hover {
 	background-color: transparent;
-	color: #7dc22b; /* needs to stay here because of the color property of a tag */
+	color:  #f7f9fd; /* needs to stay here because of the color property of a tag */
 	text-decoration: none;
 }
 
 .btn-solid-lg {
 	display: inline-block;
 	padding: 1.625rem 2.625rem 1.625rem 2.625rem;
-	border: 1px solid #7dc22b;
+	border: 1px solid  #f7f9fd;
 	border-radius: 4px;
-	background-color: #7dc22b;
+	background-color:  #f7f9fd;
 	color: #ffffff;
 	font-weight: 600;
 	font-size: 0.875rem;
@@ -203,7 +203,7 @@ a:hover {
 
 .btn-solid-lg:hover {
 	background-color: transparent;
-	color: #7dc22b; /* needs to stay here because of the color property of a tag */
+	color:  #f7f9fd; /* needs to stay here because of the color property of a tag */
 	text-decoration: none;
 }
 
@@ -306,9 +306,9 @@ a:hover {
 	display: inline-block;
 	width: 100%;
 	height: 3.25rem;
-	border: 1px solid #7dc22b;
+	border: 1px solid  #f7f9fd;
 	border-radius: 4px;
-	background-color: #7dc22b;
+	background-color:  #f7f9fd;
 	color: #ffffff;
 	font-weight: 600;
 	font-size: 0.875rem;
@@ -318,9 +318,9 @@ a:hover {
 }
 
 .form-control-submit-button:hover {
-	border: 1px solid #7dc22b;
+	border: 1px solid  #f7f9fd;
 	background-color: transparent;
-	color: #7dc22b;
+	color:  #f7f9fd;
 }
 
 
@@ -391,7 +391,7 @@ a:hover {
 .navbar .nav-item.dropdown.show .nav-link,
 .navbar .nav-item .nav-link:hover,
 .navbar .nav-item .nav-link.active {
-	color: #7dc22b;
+	color: #b0b0a9;
 }
 
 /* Dropdown Menu */
@@ -428,7 +428,7 @@ a:hover {
 
 .navbar .dropdown-item:hover {
 	background-color: #2b2b4f;
-	color: #7dc22b;
+	color:  #f7f9fd;
 }
 
 .navbar .dropdown-divider {
@@ -447,7 +447,7 @@ a:hover {
 }
 
 .navbar .fa-stack-2x {
-	color: #7dc22b;
+	color: #8b8b8b;
 	transition: all 0.2s ease;
 }
 
@@ -461,7 +461,7 @@ a:hover {
 }
 
 .navbar .fa-stack:hover .fa-stack-1x {
-	color: #7dc22b;
+	color: #ffffff;
 }
 
 .navbar .navbar-toggler {
@@ -621,7 +621,7 @@ a:hover {
 }
 
 .modal-content .list-unstyled .fas {
-	color: #7dc22b;
+	color:  #f7f9fd;
 	font-size: 0.75rem;
 	line-height: 1.75rem;
 }
@@ -746,7 +746,7 @@ a:hover {
 	height: 90px;
 	margin-bottom: 2rem;
 	border-radius: 50%;
-	background-color: #7dc22b;
+	background-color:  #f7f9fd;
 	text-align: center;
 }
 
@@ -816,7 +816,7 @@ a:hover {
 
 .counter .purecounter {
 	margin-bottom: 1.5rem;
-	color: #7dc22b;
+	color:  #f7f9fd;
 	font-weight: 600;
 	font-size: 6rem;
 	line-height: 4rem;
@@ -836,6 +836,7 @@ a:hover {
 	position: relative;
 	padding-top: 9.75rem;
 	padding-bottom: 9.75rem;
+	background: url('../images/about-background.jpg');
 }
 
 .slider-1 .quotes-decoration {
@@ -884,11 +885,19 @@ a:hover {
 	margin-bottom: 1.75rem;
 	font-size: 1.25rem;
 	line-height: 2rem;
+	color: #ffffff;
+}
+.slider-1.h1 {
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 2.5rem;
+	line-height: 3.25rem;
+	font-family: "Poppins"
 }
 
 .slider-1 .testimonial-author {
 	margin-bottom: 0.25rem;
-	color: #2b2b4f;
+	color: #ffffff;
 }
 
 
@@ -942,7 +951,7 @@ a:hover {
 }
 
 .cards-2 .fa-stack-2x {
-	color: #7dc22b;
+	color:  #f7f9fd;
 	transition: all 0.2s ease;
 }
 
@@ -956,7 +965,7 @@ a:hover {
 }
 
 .cards-2 .fa-stack:hover .fa-stack-1x {
-	color: #7dc22b;
+	color:  #f7f9fd;
 }
 
 
@@ -991,7 +1000,7 @@ a:hover {
 }
 
 .form-1 .list-unstyled .fas {
-	color: #7dc22b;
+	color:  #f7f9fd;
 }
 
 .form-1 .map-responsive {
@@ -1075,7 +1084,7 @@ a:hover {
 }
 
 .footer .footer-col.third .fa-stack:hover .fa-stack-2x {
-    color: #7dc22b;
+    color:  #f7f9fd;
 }
 
 .footer .footer-col.third .fa-stack:hover .fa-stack-1x {
@@ -1166,7 +1175,7 @@ a:hover {
 }
 
 .ex-cards-1 .card .fa-stack-2x {
-	color: #7dc22b;
+	color:  #f7f9fd;
 }
 
 .ex-cards-1 .card .fa-stack-1x {
