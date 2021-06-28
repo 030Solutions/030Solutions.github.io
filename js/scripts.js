@@ -76,6 +76,7 @@ if (dropdownCheck !== null) {
 
 /* Card Slider - Swiper */
 var cardSlider = new Swiper('.card-slider', {
+	speed: 600,
 	autoplay: {
 		delay: 4000,
 		disableOnInteraction: false
