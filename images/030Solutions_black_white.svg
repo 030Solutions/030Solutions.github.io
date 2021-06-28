@@ -9,13 +9,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="282.99872"
+   width="756.40613"
    height="254.70058"
-   viewBox="0 0 282.99872 254.70058"
+   viewBox="0 0 756.40613 254.70058"
    version="1.1"
    id="SVGRoot"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
-   sodipodi:docname="logo.svg">
+   sodipodi:docname="030Solutions_black_white.svg">
   <defs
      id="defs927" />
   <sodipodi:namedview
@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.64"
-     inkscape:cx="-450.70317"
-     inkscape:cy="227.35029"
+     inkscape:cx="-447.57817"
+     inkscape:cy="219.53779"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -125,5 +125,22 @@
          id="path700-3"
          inkscape:connector-curvature="0" />
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:99.9430542px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4985764;"
+       x="78.003593"
+       y="452.16113"
+       id="text30"><tspan
+         sodipodi:role="line"
+         x="78.003593"
+         y="452.16113"
+         id="tspan28"
+         style="stroke-width:2.4985764;fill:#ffffff;"><tspan
+           x="78.003593"
+           y="452.16113"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:99.9430542px;font-family:Akashi;-inkscape-font-specification:'Akashi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:2.4985764;fill:#ffffff;"
+           id="tspan26"><tspan
+   style="fill:#000000"
+   id="tspan67">030</tspan>Solutions</tspan></tspan></text>
   </g>
 </svg>
